@@ -14,3 +14,5 @@ The idea is every word in our vocabualry is gonna be mapped to a vector!
 A firly novel way to get a depper understanging out of it is to imagine a world map. 
 
 <img src="./img/world.png">
+
+We assume that the places which are geographically 
