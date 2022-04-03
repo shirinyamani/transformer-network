@@ -21,3 +21,11 @@ So if we think of it from a math viewpoint by considering the lantitude and long
 - Whereas if the associated lantitude and longitudes of 2 points is very different, then we would expect that they are far away from each other!
 So, we have a concept of **Similarity** manifested thro **Proximity**!
 
+So we will think and look similarily to the Word Embedding concept! So;
+1. So every vocabulary word is gonna be mapped to a point in 2D space!
+2. then the closer the two words are, the more **related or synonymous** they are!
+3. and the farther the two words are, the more **dis-similar or non-synonymous** we would expect them to be!
+
+<img src="./img/w2vec1.png">
+
+# Word Mapping
