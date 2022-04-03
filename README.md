@@ -8,10 +8,10 @@
 
 # 1. Introduction to word embedding concept
 
-The idea is every word in our vocabualry is gonna be mapped to a vector!
+Before deep diving into Transformers we need to get familiar with a basic concepts of word embedding! So, the idea is very simple; Word Embedding means that every word in our vocabualry is gonna be mapped to a vector!
 
 <img src="./img/w2vec.png">
-A firly novel way to get a depper understanging out of it is to imagine a world map. 
+A firly novel way to get a deepper understanging out of it is to imagine a world map. 
 
 <img src="./img/world.png">
 
