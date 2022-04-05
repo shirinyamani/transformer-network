@@ -1,10 +1,13 @@
 # transformer-network
 
 1. word embedding concept
-2. one-hot word embedding
-3. inner product
-4. relative similarity concept
-5. 
+    - word mapping
+    - word to vector
+    - Conceptualization of Word Vectors
+    - Relationhip between word vectors
+2. inner product
+3. relative similarity concept
+4. 
 
 # 1. Introduction to word embedding concept
 
@@ -73,5 +76,6 @@ If you look at the word "politics" since politics have had a significant role in
 
 So the idea that I want ya to gather from this is that, what that word vector is doing, is represnting component by component(+ if aligned with the word and - if not aligned with the word) is providing the **underlying themantic of the word**! So, what we gonna do next is to take this **underlying themantic of the word** to form a new natural language processing modeling!
 
+## Relationship between word vectors
 
 
