@@ -42,6 +42,7 @@ Each of the vectors associated with the given words is often called **Embedding*
 <img src="./img/w2vec2.png">
 
 So the idea is basically mapping each and every word to a vector!
+
 <img src="./img/w2vec.png">
 
 So now imagine we have a sentence consists of several words sequentially followed by each other! Then this means, we need to map each word to a vector! So, in the below example, C1 is the vector associated with the first word and so on! The way we learn sucha thing is gonna be discussed later in this article!
