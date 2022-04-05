@@ -85,6 +85,9 @@ So based on our current knowledge, in order to get the words ready for further m
 
 <img src="./img/v2wdiagram.png">
 
-## BUT 😏😐....
+## But... 😏😐
+As you probably notice, this way of mapping each word to a single vector is pretty restrictive! Because, if you look at dictionary, word in different context has different meanings! 
+
+<img src="./img/bat.png">
 
 
