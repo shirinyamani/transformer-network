@@ -50,7 +50,7 @@ So now imagine we have a sentence consists of several words sequentially followe
 <img src="./img/w2vecconcept.png">
 
 But what I want you to achieve from here is that;
-1. C(i) is the vector associated with the word(i)!
+1. C(i) is the vector associated with the word(i)! Each of the C(i) is a D-dimensional vector!
 2. If two words are similar, then we would expect their associated vectors to be nearby/close to each other!
 3. Then we gonna learn those vectors from C(1) to C(n) based upon a large corpus of text! So the idea of this learning concept is to achieve proximity of the words to each other!
 4. Once we have achieved this codes, then we would have codebook composed of all the vectors associated with the words!
