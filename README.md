@@ -54,3 +54,5 @@ But what I want you to achieve from here is that;
 3. Then we gonna learn those vectors from C(1) to C(n) based upon a large corpus of text! So the idea of this learning concept is to achieve proximity of the words to each other!
 4. Once we have achieved this codes, then we would have codebook composed of all the vectors associated with the words!
 5. Then once we get such codebook then we are ready to start our analysis process with the associated algorithms! Since now we have numbers(vectors) that are well enough to do the mathematical analysis! Look at the example below;
+
+<img src="./img/w2vecexp.png">
