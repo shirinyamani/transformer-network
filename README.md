@@ -40,3 +40,17 @@ But the key here to notice is that words are **not numbers**! they are not in fo
 
 Each of the vectors associated with the given words is often called **Embedding**! So the idea of embedding is to map the words to a vector or to embed a word in a vector space!
 <img src="./img/w2vec2.png">
+
+So the idea is basically mapping each and every word to a vector!
+<img src="./img/w2vec.png">
+
+So now imagine we have a sentence consists of several words sequentially followed by each other! Then this means, we need to map each word to a vector! So, in the below example, C1 is the vector associated with the first word and so on! The way we learn sucha thing is gonna be discussed later in this article!
+
+<img src="./img/w2vecconcept.png">
+
+But what I want you to achieve from here is that;
+1. C(i) is the vector associated with the word(i)!
+2. If two words are similar, then we would expect their associated vectors to be nearby/close to each other!
+3. Then we gonna learn those vectors from C(1) to C(n) based upon a large corpus of text! So the idea of this learning concept is to achieve proximity of the words to each other!
+4. Once we have achieved this codes, then we would have codebook composed of all the vectors associated with the words!
+5. Then once we get such codebook then we are ready to start our analysis process with the associated algorithms! Since now we have numbers(vectors) that are well enough to do the mathematical analysis! Look at the example below;
