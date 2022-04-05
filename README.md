@@ -85,4 +85,6 @@ So based on our current knowledge, in order to get the words ready for further m
 
 <img src="./img/v2wdiagram.png">
 
+**BUT 😏😐....**
+
 
