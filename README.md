@@ -90,4 +90,7 @@ As you probably notice, this way of mapping each word to a single vector is pret
 
 <img src="./img/bat.png">
 
+So the fact of mapping each word to **one single vector** in a sense that I explained earlier, sounds pretty restrictive! Becasue it does not take into account the surrounding words context! So what we wanna do now, is building a framework by which, we can modify this mappings in a way that takes into account the surrounding words!
+So in order to do sucha thing, we need to get our hands dirty with the concept of **Inner Product**! 
+
 
