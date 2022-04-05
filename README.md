@@ -5,7 +5,8 @@
     - word to vector
     - Conceptualization of Word Vectors
     - Relationhip between word vectors
-2. inner product
+2. Inner product
+    - Accounting for word context
 3. relative similarity concept
 4. 
 
@@ -76,6 +77,12 @@ If you look at the word "politics" since politics have had a significant role in
 
 So the idea that I want ya to gather from this is that, what that word vector is doing, is represnting component by component(+ if aligned with the word and - if not aligned with the word) is providing the **underlying themantic of the word**! So, what we gonna do next is to take this **underlying themantic of the word** to form a new natural language processing modeling!
 
-## Relationship between word vectors
+# Inner Product 
+
+## Accounting for word context
+Now that we understand the concept of word to vector and the intuition beyond it, let's move forward and generalize same concept to a sequence of words!
+So based on our current knowledge, in order to get the words ready for further mathematical analysis and modeling, we map each word to a vector of d-dimensional!
+
+<img src="./img/v2wdiagram.png">
 
 
