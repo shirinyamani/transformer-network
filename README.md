@@ -8,6 +8,7 @@
 2. Inner product
     - Accounting for word context
     - Why inner product
+    - exponential function
 3. Attention Mechanism
 4. 
 
@@ -116,4 +117,25 @@ Do ya remember the my notinal example of Paris? So now imagine we have two **sim
 
 Then if you remember, **inner product** would take component by component and multipy them together! So if the components of C1 and C2 shares similar signs (+ and + or - and -) then the inner product of them gonna be possitive and large, right? then if sum all these positive values we would endup a large positive number, right? 
 Similarly if two words are dissimilar then it means that the component of their associated vectors **do not** have similar signs(i.e. + and - or - and +) and hence the multiplication of the components then the sum will be negative and small, right? 
-So this exactly why when we say that the inner product is gonna be **positive and large** if the **two words are similar**! 😎😎
+So this exactly why when we say that the inner product is gonna be **positive and large** if the **two words are similar**! 😎
+
+## But... 😐
+In the concept of Machine Learning, it's not pretty convenient to work with dot products or values that are sometimes +(for similar words) and sometimes -(for dissimilar word), right? 
+To solve such problem, we gotta remind ourselves of the lovely **exponential function**! 
+
+<img src="./img/expo.png"> 
+
+So here the X-asis is the input and Y-asis is the output of the function! The most important point to get out of this equation is;
+1. For every value of X the exponential function is gonna be Positive! So this means the more positive value of X, the **larger** the exponetial function(Y). 
+2. The more negative value of X, the smaller the exponetial function(Y). 
+3. The exponetial function is called a **monotonically** increasing function of the input X. 
+4. And remember that the inner product of positive and large represents the words that are align and similar! Conversely, the inner product of negative and small represents the words that are dissimilar!
+5. The output of the exponential function is always larger if the input is larger! E.g. If ya give me two values of + and -, the exponential output of the positive value is gonna be much larger than the negative input! So the exponetial function preserve the meaning of positive and negative input, however the out put is always positive! **So....**
+
+<img src="./img/expodotpro.png"> 
+
+**So:**
+1. If two words are similar, then the exponentiation of the inner product between those words will be large!
+2. If two words are dissimilar, then the exponentiation of the inner product between those words ar gonna be large!
+3. This exponentite preserves the meaning of words as represented by inner product!
+4. We chose this exponential function because the output is always positive which is convinent to work with in the concept of ML.
