@@ -13,7 +13,8 @@
     - Relative Similarity
     - Concept of Attention
     - Vector Transformation
-4. Self-attention
+4. Self-attention diagam
+    - Skip Connection
 
 # 1. Introduction to word embedding concept
 
@@ -198,6 +199,8 @@ Now the thing that I want you to think 🧠 about is these relational numbers! (
 👇
 **Attention** basically means how much attention should be paid between word K and word i for constituding the new representation of word C k which takes into account the contextual relationship of the surrounding words!
 
+# Self-attention Mechanism
+
 ## Vector Transformed with Context
 - So thro this attention process, the original naive vector or Ck **transformed** to a new vector ~Ck which takes into account the context of surrounding words! (C k --> ~Ck)
 - So that Ck attends to N code to which it is most correlated as inplied thro the underlying inner product between word K and all the other words in the sequence!
@@ -223,5 +226,13 @@ So we need to modify the current design in a way that takes into account the **o
 
 <img src="./img/diagram.png">
 
+But wait! 🤔 Before getting into solution which takes into account the order of words, let's introduce a new concept called **Skip Connection**!
 
+## Skip Connection
+So in the original setup (diagram above), when you go from bottom to top (from input to output) when we do the attention network and we get the output sequence, we have totally lost the original word embeddings at the bottom! So what it does is; it takes the oroginal word embeddings and it skips it above the attention network! Then what we do is we **add** the original word embeddings to the output of the attention network and after we have done this, we normalize them with respect to each other!
 
+<img src="./img/skip.png">
+
+## Purpose of Skip Connection
+The main goal of Skip Connection is preserving the original input sequence! 🌱 Ya ask why? 👇 should answer ya!
+This is because even with a lot of attention heads, there’s no guarantee that a word will attend to its own position! It’s possible for the attention filter to forget entirely about the most recent word in favor of watching all of the earlier words that might be relevant. A skip connection takes the original word and manually adds it back into the signal, so that there’s no way it can be dropped or forgotten. This source of robustness may be one of the reasons for transformers' good behavior in so many varied sequence completion tasks! 😎
