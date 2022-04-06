@@ -154,3 +154,5 @@ So what would like to do now is, assume that we have N words with C(N) associate
 The equation is;
 
 <img src="./img/eq.png">
+
+Note that r is always positive (because the exponentiate is always +)and a number between 0 and 1!
