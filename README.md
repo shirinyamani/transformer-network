@@ -123,7 +123,7 @@ So this exactly why when we say that the inner product is gonna be **positive an
 In the concept of Machine Learning, it's not pretty convenient to work with dot products or values that are sometimes +(for similar words) and sometimes -(for dissimilar word), right? 
 To solve such problem, we gotta remind ourselves of the lovely **exponential function**! 
 
-<img src="./img/expo.png"> 
+<img src="./img/expo.png" height="250" width="300"> 
 
 So here the X-asis is the input and Y-asis is the output of the function! The most important point to get out of this equation is;
 1. For every value of X the exponential function is gonna be Positive! So this means the more positive value of X, the **larger** the exponetial function(Y). 
@@ -134,7 +134,7 @@ So here the X-asis is the input and Y-asis is the output of the function! The mo
 
 <img src="./img/expodotpro.png"> 
 
-**So:**
+## So:
 1. If two words are similar, then the exponentiation of the inner product between those words will be large!
 2. If two words are dissimilar, then the exponentiation of the inner product between those words ar gonna be large!
 3. This exponentite preserves the meaning of words as represented by inner product!
