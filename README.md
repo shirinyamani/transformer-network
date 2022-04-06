@@ -102,10 +102,9 @@ So, the idea of inner product is to take the dot product of two vectors! The pur
 
 <img src="./img/dotproduct.png"> 
 
-So here we have two vectors, C1 and C2, each one of each has d-components! So we gonna take the first d-component of C1 and the first d-component of C2 and then multiply them together all the way for all the d-components! After that we sum all together which is the concept of inner product!
-So this **inner product** is gonna;
-1. quantify **how similar C1 is to C2**
-2. So if W1 and W2 are similar then we would expect the coresponding C1 and C2 to be similar! Because as we discussed eairlier, each of the components of C1 and C2 represents the underlying meaning of the word!
+So here we have two vectors, C1 and C2, each one of each has d-components! So we gonna take the first d-component of C1 and the first d-component of C2 and then multiply them together all the way for all the d-components! After that we sum all together which is the concept of inner product! So this **inner product** is gonna;
+**1.** quantify **how similar C1 is to C2**
+**2.** So if W1 and W2 are similar then we would expect the coresponding C1 and C2 to be similar! Because as we discussed eairlier, each of the components of C1 and C2 represents the underlying meaning of the word!
 3. And if C1 and C2 are similar then the inner product is gonna be positive and large! **(see below to figure why!)**
 4. If C1 and C2 are not similar then the inner product is gonna be negative and small!
 
