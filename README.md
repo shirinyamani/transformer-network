@@ -164,5 +164,5 @@ So till now we were able to quantify the **relative degree** to which, the Kth w
 3. The smaller the r, the less relative they are!
 4. This r is a mathemtical way to say the relation between words which is gained by the word vectors. 
 5. The way we gonna learn this relationships is thro **gradient decent**
-6. **Headsup** When we do this inner products between the words in a sequence, they can be done in **parallel computing** because they are independent from each other which means that they can be done simultaneously as they are not related to each other!
+6. **Headsup:🔥🔥** When we do this inner products between the words in a sequence, they can be done in **parallel computing** because they are independent from each other which means that they can be done simultaneously as they are not related to each other!
 The undelying inner product between word K and all the other N words in our sequence can be performed in parallel!
