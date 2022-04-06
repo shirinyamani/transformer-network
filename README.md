@@ -139,3 +139,17 @@ So here the X-asis is the input and Y-asis is the output of the function! The mo
 2. If two words are dissimilar, then the exponentiation of the inner product between those words ar gonna be large!
 3. This exponentite preserves the meaning of words as represented by inner product!
 4. We chose this exponential function because the output is always positive which is convinent to work with in the concept of ML.
+
+# Attention Mechanism
+So what would like to do now is, assume that we have N words with C(N) associated vectors! Based on our current knowledge, the inner product is a measure of similarity between words vectors and if its + ----> two given words are similar, if - ---> words are dissimilar , right? 
+1. So what we gonna do now is to **quantifying how similar All words are to Word K**! In other words, we wanna quantify how similar each and every word in our sequence is, to Kth word! To do so, we need to calculate the dot product between this word (Word k) with each of the words of our sequence (Step 1), right? Ops.. wait, ya asked why? Because as earlier discussed, dot product is a measure of similarity based on what is happening at the heart of it! Refer to `Inner Product` section to recall it! 
+
+2. Now, those inner produts can be + (similar word) or -(dissimilar word). So, we exponente to make them positive with respecti to preserving the meaning of them! (Step 2)
+
+3. Last step gotta be getting a **relative representation** for the strengh of the inner product! So r k--->i represnts the relation of the Kth word to the ith word! (Step 3) Which resresent the **relative similarity** of word K to word i. In other words, when we say **relative** it means how much the Kth word is similar to the ith word, relative to the other words in the sequence! See the equation for calculation of relative similarity!
+
+<img src="./img/rs.png"> 
+
+The equation is;
+
+<img src="./img/eq.png">
