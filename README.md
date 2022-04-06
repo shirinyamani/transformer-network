@@ -7,6 +7,7 @@
     - Relationhip between word vectors
 2. Inner product
     - Accounting for word context
+    - Why inner product
 3. relative similarity concept
 4. 
 
