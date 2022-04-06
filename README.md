@@ -13,7 +13,7 @@
     - Relative Similarity
     - Concept of Attention
     - Vector Transformation
-4. 
+4. Self-attention
 
 # 1. Introduction to word embedding concept
 
@@ -173,9 +173,8 @@ The undelying inner product between word K and all the other N words in our sequ
 1. Map the words to their associated vectors
 2. Quantify similarity between words via Inner Product
 3. Quantify Relative Similarity
-4. So now wanna revise or refine the word vectors, why? Ya remember the Bat 🦇 exp? if yes then recall that the mapping from word K to code K (C k) was done independent of the context in which the Word K is used! So gotta modify the word vectors in a way that take into account the context of the surrounding words!  **But how? 🤔🤨** 
+4. So now wanna revise or refine the word vectors, why? Ya remember the Bat 🦇 exp? if yes then recall that the mapping from word K to code K (C k) was done independent of the context in which the Word K is used! So gotta modify the word vectors in a way that take into account the context of the surrounding words!  **But how? 🤔** 
 ## 👇
-
 We now know that r k--->i represents the relative relationship of word k to word i. So we gonna use this idea to manifest a refined word vector for the Kth word which take into account the context of surrounding words!  **But how? 🤔🤨**
 
 1. We gonna take those r and multiply them with the word vectors of the words in the sequence (C 1 --- C N): So: r k --->1 * C 1 + r k --->2 * C 2 + ... + r k --->N * C N. (Step 1)
@@ -211,3 +210,18 @@ Now the thing that I want you to think 🧠 about is these relational numbers! (
 - Finally **Values** are those relatioal numbers (r k-->i) multipied by our original vectors! 
 
 <img src="./img/notation.png">
+
+So till now we were able to transform the initial naive vector Ck to a refined vector ~Ck which takes into account the context of the surrounding words!
+Then if we do it for one word (left picture), we can do it for **all** the words in the sequence (right picture)! So now ~C1 takes into account the context associated with all other words in the sequence all the way to ~CN!
+
+<img src="./img/tf1.png">
+
+**But** as ya may notice, this process is independent from the **Order** of the words! In other words, if we permute or re-order the words in a way that for exp. the last word becomes the first word, the output of this attention process will be the same! It means that the order of the words does not matter in this scenario! However, in the case of our Natural language, order of the words matters! This is becuase it effects on the contextual meaning!
+For example, if we have a sentence like this:
+- United States ----> The word we expect to be after this phrase "United States" is pretty different if there is a gap between "United---gap---states--gap----"!
+So we need to modify the current design in a way that takes into account the **order** of the words! But before jumping into this, let's see a quick diagram-look summary of what we've learnt so far!
+
+<img src="./img/diagram.png">
+
+
+
