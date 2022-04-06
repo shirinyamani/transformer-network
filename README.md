@@ -8,7 +8,7 @@
 2. Inner product
     - Accounting for word context
     - Why inner product
-3. relative similarity concept
+3. Attention Mechanism
 4. 
 
 # 1. Introduction to word embedding concept
