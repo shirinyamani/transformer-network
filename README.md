@@ -104,10 +104,15 @@ So, the idea of inner product is to take the dot product of two vectors! The pur
 
 So here we have two vectors, C1 and C2, each one of each has d-components! So we gonna take the first d-component of C1 and the first d-component of C2 and then multiply them together all the way for all the d-components! After that we sum all together which is the concept of inner product! So this **inner product** is gonna;
 1. quantify **how similar C1 is to C2**
-2. So if W1 and W2 are similar then we would expect the coresponding C1 and C2 to be similar! Because as we discussed eairlier, each of the components of C1 and C2 represents the underlying meaning of the word!
-3. And if C1 and C2 are similar then the inner product is gonna be positive and large! **(see below to figure why!)**
-4. If C1 and C2 are not similar then the inner product is gonna be negative and small!
+2. So **if W1 and W2 are similar then we would expect the coresponding C1 and C2 to be similar**! Because as we discussed eairlier, each of the components of C1 and C2 represents the underlying meaning of the word!
+3. And **if C1 and C2 are similar then the inner product is gonna be positive and large!** (see below to figure why!)
+4. If **C1 and C2 are not similar then the inner product is gonna be negative and small**!
 
+## Why the dot product is gonna positive and large if the two words are similar?
+Do ya remember the my notinal example of Paris? So now imagine we have two **similar** words; word1 and word2 which has 10-dimensional vector associated with them (just for simplicity, in practice the dimension can get up to 256!). When we say these words are **similar** then we know that their associated vectors gonna be similar, right? If yes, then it means that each of the component of ther vector are similar(being either + or -)! So for example in below picture, because these two word vectors are similar, then as you see both of the componects 1 are positive! 
 
+<img src="./img/innerwhy.png"> 
 
-
+Then if you remember, **inner product** would take component by component and multipy them together! So if the components of C1 and C2 shares similar signs (+ and + or - and -) then the inner product of them gonna be possitive and large, right? then if sum all these positive values we would endup a large positive number, right? 
+Similarly if two words are dissimilar then it means that the component of their associated vectors **do not** have similar signs(i.e. + and - or - and +) and hence the multiplication of the components then the sum will be negative and small, right? 
+So this exactly why when we say that the inner product is gonna be **positive and large** if the **two words are similar**! 😎😎
