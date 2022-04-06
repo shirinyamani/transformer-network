@@ -11,6 +11,8 @@
     - exponential function
 3. Attention Mechanism
     - Relative Similarity
+    - Concept of Attention
+    - Vector Transformation
 4. 
 
 # 1. Introduction to word embedding concept
@@ -164,5 +166,48 @@ So till now we were able to quantify the **relative degree** to which, the Kth w
 3. The smaller the r, the less relative they are!
 4. This r is a mathemtical way to say the relation between words which is gained by the word vectors. 
 5. The way we gonna learn this relationships is thro **gradient decent**
-6. **Headsup:🔥🔥** When we do this inner products between the words in a sequence, they can be done in **parallel computing** because they are independent from each other which means that they can be done simultaneously as they are not related to each other!
+6. **🔥Headsup:** When we do this inner products between the words in a sequence, they can be done in **parallel computing** because they are independent from each other which means that they can be done simultaneously as they are not related to each other!
 The undelying inner product between word K and all the other N words in our sequence can be performed in parallel!
+
+## Summary till now
+1. Map the words to their associated vectors
+2. Quantify similarity between words via Inner Product
+3. Quantify Relative Similarity
+4. So now wanna revise or refine the word vectors, why? Ya remember the Bat 🦇 exp? if yes then recall that the mapping from word K to code K (C k) was done independent of the context in which the Word K is used! So gotta modify the word vectors in a way that take into account the context of the surrounding words!  **But how? 🤔🤨** 
+## 👇
+
+We now know that r k--->i represents the relative relationship of word k to word i. So we gonna use this idea to manifest a refined word vector for the Kth word which take into account the context of surrounding words!  **But how? 🤔🤨**
+
+1. We gonna take those r and multiply them with the word vectors of the words in the sequence (C 1 --- C N): So: r k --->1 * C 1 + r k --->2 * C 2 + ... + r k --->N * C N. (Step 1)
+2. Then add these all together after whichm we gonna take a new representation for the Kth word (~C k) (Step 2)
+
+<img src="./img/refinedvec.png">
+
+## 🔥 Notice:
+The thing that I want you to notice here is that;
+if Ck is highly related to a particular word in our sequence of N words, then the coresponding relative relation (r) would be **Large** becuase its higly related, then that Large r is gonna multiplied by the associated code and therefore that highly related word would contribute significantly to the revised version of the code for word K! 
+So all in all, we successfully revised or refined the code (word vector) in a way that take into account its contextual relative relationship to each of the words in the sequence! Now, 👇
+
+## Concept of Attention
+
+Now the thing that I want you to think 🧠 about is these relational numbers! (r k-->1) What are they telling us?  🤔
+
+- They are telling us, whenever we are doing this mapping to ~Ck, **how much attention we should pay to corresponding Code or word** (C k)!
+- if the **relationship is high** (r is high) ---> then pay **high attention** to the corresponding word!
+- if the **relationship is small** which means that particualr word is not related to the Kth word, (r is small) ---> then pay **low attention** to the corresponding word!
+- The above points are exaxtly the concept of **Attention 😎**!
+👇
+**Attention** basically means how much attention should be paid between word K and word i for constituding the new representation of word C k which takes into account the contextual relationship of the surrounding words!
+
+## Vector Transformed with Context
+- So thro this attention process, the original naive vector or Ck **transformed** to a new vector ~Ck which takes into account the context of surrounding words! (C k --> ~Ck)
+- So that Ck attends to N code to which it is most correlated as inplied thro the underlying inner product between word K and all the other words in the sequence!
+
+<img src="./img/tf.png">
+
+## Notational Meanings 🤩
+- Ck that we gonna examine all other words with respect to, is called **Query**! So we wanna query how related the query Ck is to each of the N words!
+- The N vectors associated with words in our sequece is called **Key**! So the degree to which the query Ck is related to the Keys thro the inner product will quantify how much attention should be paid on the corresponding vector when we construct the updated version of our code (~Ck)!
+- Finally **Values** are those relatioal numbers (r k-->i) multipied by our original vectors! 
+
+<img src="./img/notation.png">
