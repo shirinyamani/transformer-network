@@ -10,6 +10,7 @@
     - Why inner product
     - exponential function
 3. Attention Mechanism
+    - Relative Similarity
 4. 
 
 # 1. Introduction to word embedding concept
