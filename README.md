@@ -156,3 +156,13 @@ The equation is;
 <img src="./img/eq.png">
 
 Note that r is always positive (because the exponentiate is always +)and a number between 0 and 1!
+So till now we were able to quantify the **relative degree** to which, the Kth word is related to each of the N words in the sequence! So the more related the Kth word is to any of the word in the sequence, the closer that r to 1 would be(because they all add together) and the more unrelated word are to eachother, the closer to 0 would be!
+
+## Intrepretation of the Relative Similarity
+1. Quantify how similar the Kth word is to word i
+2. The larger the r, the more degree of correlation!
+3. The smaller the r, the less relative they are!
+4. This r is a mathemtical way to say the relation between words which is gained by the word vectors. 
+5. The way we gonna learn this relationships is thro **gradient decent**
+6. **Headsup** When we do this inner products between the words in a sequence, they can be done in **parallel computing** because they are independent from each other which means that they can be done simultaneously as they are not related to each other!
+The undelying inner product between word K and all the other N words in our sequence can be performed in parallel!
