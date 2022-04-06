@@ -15,6 +15,7 @@
     - Vector Transformation
 4. Self-attention diagam
     - Skip Connection
+    - Positional Embeddings
 
 # 1. Introduction to word embedding concept
 
@@ -236,3 +237,10 @@ So in the original setup (diagram above), when you go from bottom to top (from i
 ## Purpose of Skip Connection
 The main goal of Skip Connection is preserving the original input sequence! 🌱 Ya ask why? 👇 should answer ya!
 This is because even with a lot of attention heads, there’s no guarantee that a word will attend to its own position! It’s possible for the attention filter to forget entirely about the most recent word in favor of watching all of the earlier words that might be relevant. A skip connection takes the original word and manually adds it back into the signal, so that there’s no way it can be dropped or forgotten. This source of robustness may be one of the reasons for transformers' good behavior in so many varied sequence completion tasks! 😎
+
+## Positional Embedding
+So now is the time to solve the order of words problem!😜
+What we need to do is to modify this setup (diagram above) in a way that takes into account the position of words in the sequence!
+To be added.....
+
+<img src="./img/position.png">
