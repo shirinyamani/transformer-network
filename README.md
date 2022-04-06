@@ -78,7 +78,7 @@ If you look at the word "politics" since politics have had a significant role in
 
 So the idea that I want ya to gather from this is that, what that word vector is doing, is represnting component by component(+ if aligned with the word and - if not aligned with the word) is providing the **underlying themantic of the word**! So, what we gonna do next is to take this **underlying themantic of the word** to form a new natural language processing modeling!
 
-# Inner Product 
+# 2. Inner Product 
 
 ## Accounting for word context
 Now that we understand the concept of word to vector and the intuition beyond it, let's move forward and generalize same concept to a sequence of words!
