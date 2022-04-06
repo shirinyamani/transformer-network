@@ -90,7 +90,9 @@ As you probably notice, this way of mapping each word to a single vector is pret
 
 <img src="./img/bat.png">
 
-So the fact of mapping each word to **one single vector** in a sense that I explained earlier, sounds pretty restrictive! Becasue it does not take into account the surrounding words context! So what we wanna do now, is building a framework by which, we can modify this mappings in a way that takes into account the surrounding words!
-So in order to do sucha thing, we need to get our hands dirty with the concept of **Inner Product**! 
+So the fact of mapping each word to **one single vector** in a sense that I explained earlier, sounds pretty restrictive! Becasue it does not take into account the surrounding words context! So what we wanna do now, is building a framework by which, we can modify this mappings in a way that takes into account the meaning of surrounding words!
+To do that, we need to first get familiar with the concept of **Inner Product**! 
 
+Thus far, in the above paragraph, I mentioned that within the concept of word2vec, we map each word to a vector of d-dimensional! Where each of those d-dimensional vectors are associated with a particular meaning/topic!
 
+<img src="./img/innerpro.png"> 
