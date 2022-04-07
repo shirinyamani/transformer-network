@@ -292,8 +292,14 @@ So the key 🔑 point to take from this mechanism is to understand that each of 
 The risk of adding positional embedding to the word embeddings is mixing up information! So ofcourse, ppl have think abt Concatination! The advantage of Concatination approach is that by using Concatination, each of the positional embedding and word embedding which carry the semantic information, have thei own space so there is no risk of mixing up the information! However the downside of Concatination approach is that it requires pretty much more memory! So this approach comes with a relatively large cost of having stronger GPUs to store all those large and heavy vectors! 
 Thus, I pretty much think that there is no winner among these two approaches and the choice really depends on the application!
 
+## Overall Network Architecture
 
+If we look back to our initial design, we can see that we now have taken into account both the meaning of the words and the positional/order information of the words thro positional embeddings which is achieved thro d-dimensional vectors of each of the N words in the sequence!
+So we now have the meaning of the word plus position of the words! 
+However, these meanings does not take into account the context of the words! So that's the intuition beyond the attention network!
+But I want you to notice here that the words that are positionaly nereby eachother will potentially have similar positional embedding, therefore their inner product will be high! In contrast, the words that are far apart will have different positional embedding, therefore their inner product will be low!
 
+Then finally we need to start to learn these vectors thro our network on a large corpus of text! This learning process is gonna be don thro a simple **Feedforward Neural Network** at the top that I'm not gonna get to detail of it. Becasue I'm pretty sure anyone reading this article have a fairly good understanding on how that Neoral Network learn vectors thro a forward and update step via gradient descent! We then use a skip connection and add and normalize!
 
-
+<img src="./img/overall.png">
 
