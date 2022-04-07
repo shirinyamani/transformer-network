@@ -261,24 +261,35 @@ where:
 
 <img src="./img/p.png">
 
+Or you can think of it as:
+
+<img src="./img/p2.png">
+
 But let's see how this is working in practice!
 
-Remember that I mentioned this P is a d-dimensional vector ?
+Remember that we have a d-component vector as I mentioned this P is a d-dimensional vector ?
 So let it be represented by 👇 where it composed of embedding dimension 1, embedding dimension 2, all the way till embedding dimension d!
 
-######## Axe aval as d-dimension + sin aside!
+<img src="./img/sin1.png">
 
 Now the thing I want ya to notice is that, each and every of those embedding dimensions will have;
 - assosiated *sin* wave that has its relative frequency based on its position in the sentence!
 So for example embedding dimension 1 has relatively low frequency, embedding dimension 2 has also a sin wave but with a more quicker frequency, embedding number 3 has also a sin wave but faster! 
 - So the thing I wanna communicate is, as we move from embedding dimesion-1 all the way to embedding dimension-d, the frequency at which the sin wave is oscillated is connection to dimension and get increased as we move down!
-- Then what we gonna do is that the value of the positional embedding depends on the position of the word! 
+- Then what we gonna do is that the value of the positional embedding depends on the position of the word! So along the horizontal axis, is the position of the word! So the idea is that if ya look at a word with a given position in pur sequence, we're gonna associate a number for each of the d-dimensions of that embedding! The number is gonna be connected with the associate sin wave at that dimension! 
+So if you think about it, the **position** for the d-dimensional vector that is gonna be associated with each of the word in our sequence will depend upon the position/order of that word in the sequence! 
 
-############ axe dovom as sin va noghte ha
+<img src="./img/sin2.png">
 
-The mathematical representation of positional embedding →pt as a vector containing pairs of sines and cosines for each frequency is shown below:
+## Positional embedding All in One
+So the position of the words is meant to be reflected from left to right along the horizontal axis! So it meant to be first word, second word, third word and so on! And then depending upon where the word is, we will pick off the coresponding sin wave at each of the d- component of the embedding!
 
-<img src="./img/p2.png">
+So the key 🔑 point to take from this mechanism is to understand that each of the N words in our sequence is gonna be encoded in a d-dimensional vector which reflects the position of the word in the sequence! So this way we actually encoded positional information of each word thro this PE mechanism! However, this use of Sine Wave connected with the frequency is not the one and only way to do this! There are lots of other ways to find the position/order of words in a sequence which is beyond the scope of this article! But the Sine Wave approach is a standard way and it proved to be pretty effective!
+
+## Question: Why positional embeddings are summed with word embeddings instead of concatenation?
+
+The risk of adding positional embedding to the word embeddings is mixing up information! So ofcourse, ppl have think abt Concatination! The advantage of Concatination approach is that by using Concatination, each of the positional embedding and word embedding which carry the semantic information, have thei own space so there is no risk of mixing up the information! However the downside of Concatination approach is that it requires pretty much more memory! So this approach comes with a relatively large cost of having stronger GPUs to store all those large and heavy vectors! 
+Thus, I pretty much think that there is no winner among these two approaches and the choice really depends on the application!
 
 
 
