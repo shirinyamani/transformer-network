@@ -17,6 +17,7 @@
     - Skip Connection
     - Positional Embeddings
     - Positional Embedding in action
+    - overall architecture
 
 # 1. Introduction to word embedding concept
 
@@ -286,7 +287,7 @@ So the position of the words is meant to be reflected from left to right along t
 
 So the key 🔑 point to take from this mechanism is to understand that each of the N words in our sequence is gonna be encoded in a d-dimensional vector which reflects the position of the word in the sequence! So this way we actually encoded positional information of each word thro this PE mechanism! However, this use of Sine Wave connected with the frequency is not the one and only way to do this! There are lots of other ways to find the position/order of words in a sequence which is beyond the scope of this article! But the Sine Wave approach is a standard way and it proved to be pretty effective!
 
-## Question: Why positional embeddings are summed with word embeddings instead of concatenation?
+## ⁉️🧠 Why positional embeddings are summed with word embeddings instead of concatenation?
 
 The risk of adding positional embedding to the word embeddings is mixing up information! So ofcourse, ppl have think abt Concatination! The advantage of Concatination approach is that by using Concatination, each of the positional embedding and word embedding which carry the semantic information, have thei own space so there is no risk of mixing up the information! However the downside of Concatination approach is that it requires pretty much more memory! So this approach comes with a relatively large cost of having stronger GPUs to store all those large and heavy vectors! 
 Thus, I pretty much think that there is no winner among these two approaches and the choice really depends on the application!
