@@ -16,6 +16,7 @@
 4. Self-attention diagam
     - Skip Connection
     - Positional Embeddings
+    - Positional Embedding in action
 
 # 1. Introduction to word embedding concept
 
@@ -241,6 +242,26 @@ This is because even with a lot of attention heads, there’s no guarantee that 
 ## Positional Embedding
 So now is the time to solve the order of words problem!😜
 What we need to do is to modify this setup (diagram above) in a way that takes into account the position of words in the sequence!
-To be added.....
+But before jumping into the detail, let's first see how we can do this!
 
 <img src="./img/position.png">
+
+So as ya see in the above diagram, the way that this can be done is that we take the input sequence (input sequence) each of which is mapped to a vector (word embeddings), then those word embeddings are gonna be **added** to positional embeddings (P) which is a vector of zeros and ones, and then the rest of the network is unchanged! But the question now is how do we achieve this positional embeddings that reflect the positions of the words in the sequence? 🤔
+
+You probabely are thinking of assigning a number to each word at a given time-step so that it can reflect the position of the words in the sequence! So for exampe number "1" is given to the position of the first word in the sequence, number "2" the second word in the sequence and so on! Can ya then guess what sort of problem it introduces? 🤔
+The problem with such approach is obviously that in case we have a pretty long sentence, the values will get quit large and the network will be very un-stable due to training! So we need to do something else!
+
+The idea proposed by the original paper is kinda similar yet far more genuis! Instead of using a single number to represent the position of worda, they used a d-dimensional vector that contains information about a specific position in a sentence. This vector is meant to equip each word with its position in the sentence, which subsequently will be added to our original Word Embeddings! (P in Diagram). So the idea is that we can use this vector to add positional information to the word embeddings, right? But what about the implementation? 🤔
+
+The equation for the positional embeddings is as follows:
+
+<img src="./img/p1.png">
+
+where:
+
+<img src="./img/p.png">
+
+
+
+
+
