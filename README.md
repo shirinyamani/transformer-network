@@ -261,6 +261,26 @@ where:
 
 <img src="./img/p.png">
 
+But let's see how this is working in practice!
+
+Remember that I mentioned this P is a d-dimensional vector ?
+So let it be represented by 👇 where it composed of embedding dimension 1, embedding dimension 2, all the way till embedding dimension d!
+
+######## Axe aval as d-dimension + sin aside!
+
+Now the thing I want ya to notice is that, each and every of those embedding dimensions will have;
+- assosiated *sin* wave that has its relative frequency based on its position in the sentence!
+So for example embedding dimension 1 has relatively low frequency, embedding dimension 2 has also a sin wave but with a more quicker frequency, embedding number 3 has also a sin wave but faster! 
+- So the thing I wanna communicate is, as we move from embedding dimesion-1 all the way to embedding dimension-d, the frequency at which the sin wave is oscillated is connection to dimension and get increased as we move down!
+- Then what we gonna do is that the value of the positional embedding depends on the position of the word! 
+
+############ axe dovom as sin va noghte ha
+
+The mathematical representation of positional embedding →pt as a vector containing pairs of sines and cosines for each frequency is shown below:
+
+<img src="./img/p2.png">
+
+
 
 
 
