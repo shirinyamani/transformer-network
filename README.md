@@ -17,7 +17,9 @@
     - Skip Connection
     - Positional Embeddings
     - Positional Embedding in action
-    - overall architecture
+    - Overall architecture
+5. Sequence Encoder
+    - Encoder
 
 # 1. Introduction to word embedding concept
 
@@ -303,3 +305,17 @@ Then finally we need to start to learn these vectors thro our network on a large
 
 <img src="./img/overall.png">
 
+# Sequence Encoder
+
+Let's recap the so-called Transformer network!
+1. As discussed thro this article, in the very initial step we have N naive word embeddings that does not take into account niether the meaning of the surrounding words, nor the order of words! Therefore we need to modify them in a way that it acconts for both!
+2. So we introduce Position Embeddings to account for the positions of the word!
+3. Introduce the attention network which takes into account the context of the words! And since it has been found convinent to not loose the original word vectors so we use a skip connection!
+4. Intorduce a Feedforward Neural Network to learn the meaning of the words! But why? 🤔
+    - The first reason is that thro the process of Neural network we provide **regularization** or **structure** on this network! Tis 
+    - In terms of mathematics, what it does is restricting the output of the neural network to be constrained to the subspace associated with the vectors of the network which tend to improve the performance!
+    - tanh restricts the output of the network to be between -1 and 1!
+
+By going thro all of the above steps, we were successfully able to Encode a sequence! And if we did it one time, there is no reason to not doing it K time! Where in practice K is 3 or 6! So we can repeat the process K time which possibly makes it a **Deep Sequence Encoder** that tend to improve performance!
+
+<img src="./img/overall1.png">
