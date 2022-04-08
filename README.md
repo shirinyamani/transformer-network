@@ -341,7 +341,7 @@ So the way we're gonna do that Decoding for the entire sequence, we will do it b
 
 The mixed of Sequence Encoder to Decoder is shown in picture below; Take a look at it, think 🧠 for a sec then come and read below for further explanation! 
 
-
+<img src="./img/seq2.png">
 
 So at the bottom is the words that have been predicted by the decoder so far! 
 What we're gonna do is we gonna take the last word that we predicted and use it as the input to the decoder then produce the french version one word afte the other!
