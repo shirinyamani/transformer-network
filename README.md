@@ -335,6 +335,22 @@ So based on what we've learnt so far till now, we first need to Encode this sequ
 
 So now we have encoded our sequence, but say we wanna convert it to another language (e.g. French), if so, then gotta Decode it to the target language, right?
 
-So the way we're gonna do that Decoding for the entire sequence, we will do it by sth which is on right side which have alot incommon with what have learnt so far (left Transfomer Diagram)! So I'm gonna go thro the right step by step for ya to understand the logic!
+So the way we're gonna do that Decoding for the entire sequence, we will do it by sth (2) which have alot incommon with what have learnt so far (1)! So I'm gonna go thro the right step by step for ya to understand the logic!
 
 ## Encoder-Decoder 
+
+The mixed of Sequence Encoder to Decoder is shown in picture below; Take a look at it, think 🧠 for a sec then come and read below for further explanation! 
+
+
+
+So at the bottom is the words that have been predicted by the decoder so far! 
+What we're gonna do is we gonna take the last word that we predicted and use it as the input to the decoder then produce the french version one word afte the other!
+
+So for example imagine we have predicted "the" and "orange" in french so far (M words)! So at the bottom, there are the M words that have been predicted so far!
+So till now, on the left (lime box) is the original sequence and on the right (blue box) is the sequence that we have predicted say in french so far! 
+
+Now in the same concept, remember that I introduced repeatition of *K* to produce a deep network? Well if we did it for this side, then there is no reason to not doing the same for the left (decoder side)as well! So on the right we gonna do in *J* times!So we have a repeatition of *k* times on the left and *J* times on the right, right? So this is called a **deep architecture network**! 
+
+So the thing that I wanna ya to **🔥notice** here is that the **input** at the right are the words that have been predicted as far! And the way we're gonna do that is the **most recently predicted word** locates to left in first cell(orange) then the second most recent predicted word is in the second cell (le)! So the left most word is the most recently predicted word and the further to the right are the words that have been predicted in a while!
+
+So the idea is every time we predict a new word, that input sequence on right(2) **get shifted** to the right by one position then the new word goes to the most-left position! So the input on the right, is always shifting to the right as we predict new words!
