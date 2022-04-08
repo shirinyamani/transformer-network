@@ -25,6 +25,7 @@
     - Deep Decoder Intepretation
     - Softmax
     - Cross Attention
+7. Multi-head Attention 
 
 # 1. Introduction to word embedding concept
 
@@ -388,3 +389,5 @@ So whenever we do such architecture, we then get a new encoding of the **d-dimen
 So what's happening here is that the N words that have been decoded thus far are represented as the **Values** and **keys** via the attention mechanism which are at the top of the encoding of the input sequence! And so this is called **Cross Attention**! (3)
 
 <img src="./img/cross.png">
+
+# Multi-head Attention
