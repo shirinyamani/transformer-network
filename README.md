@@ -386,3 +386,5 @@ So the reason this is callled **Cross Attention** is because of the keys and val
 So whenever we do such architecture, we then get a new encoding of the **d-dimensional N Vectors** at the end of queries which represents a new sequence of N words! (2)
 
 So what's happening here is that the N words that have been decoded thus far are represented as the **Values** and **keys** via the attention mechanism which are at the top of the encoding of the input sequence! And so this is called **Cross Attention**! (3)
+
+<img src="./img/cross.png">
