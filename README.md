@@ -22,6 +22,7 @@
     - Encoder
 6. Coupling Sequence Encoder to Decoder
     - Decoder
+    - Decoder Intepretation
 
 # 1. Introduction to word embedding concept
 
@@ -354,3 +355,5 @@ Now in the same concept, remember that I introduced repeatition of *K* to produc
 So the thing that I wanna ya to **🔥notice** here is that the **input** at the right are the words that have been predicted as far! And the way we're gonna do that is the **most recently predicted word** locates to left in first cell(orange) then the second most recent predicted word is in the second cell (le)! So the left most word is the most recently predicted word and the further to the right are the words that have been predicted in a while!
 
 So the idea is every time we predict a new word, that input sequence on right(2) **get shifted** to the right by one position then the new word goes to the most-left position! So the input on the right, is always shifting to the right as we predict new words!
+
+# Decoder Interpretation
