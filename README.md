@@ -331,7 +331,7 @@ So here we gotta not only decode the original sequence but also we need to decod
 
 So based on what we've learnt so far till now, we first need to Encode this sequence, the process with respect to diagram above in Sequence Encode Section will be sth like this;
 
-<img src="./img/seq1">
+<img src="./img/seq1.png">
 
 So now we have encoded our sequence, but say we wanna convert it to another language (e.g. French), if so, then gotta Decode it to the target language, right?
 
