@@ -375,3 +375,14 @@ It's finally time to confront some of the simplistic assumptions I made during o
 Putting a softmax function in attention has one big downpoint! It is that it will tend to focus on a single element. This is a limitation we didn't have before. Sometimes it's useful to keep several of the preceding words in mind when predicting the next, and the softmax just robbed us of that. This is a problem for the model. We will talk about the solution within a paragraph! 😉
 
 # Cross Attention
+
+So at the top of our Encoder we will get a output sequence of M d-dimensional vectors correspondind to the original M input words!
+Now these M vectors are the **Values** and the **keys** for the attention network of the Decoder!
+Then the decoded sequence (output sequence at bottom decoding network) is the **Query** for the attention network of the Decoder!
+So if we have decoded N words up to this point (Q) then we possibly have N d-dimensional vectors corresponding to the N words that we have decoded thus far! 
+
+So the reason this is callled **Cross Attention** is because of the keys and values are coming from the M words that have been encoded at the top of our Encoding network then the Query is coming from the N words that have been decoded thus far! So cross attention is used because the keys, values and query are coming from different sources! (1)
+
+So whenever we do such architecture, we then get a new encoding of the **d-dimensional N Vectors** at the end of queries which represents a new sequence of N words! (2)
+
+So what's happening here is that the N words that have been decoded thus far are represented as the **Values** and **keys** via the attention mechanism which are at the top of the encoding of the input sequence! And so this is called **Cross Attention**! (3)
