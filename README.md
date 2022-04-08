@@ -337,3 +337,4 @@ So now we have encoded our sequence, but say we wanna convert it to another lang
 
 So the way we're gonna do that Decoding for the entire sequence, we will do it by sth which is on right side which have alot incommon with what have learnt so far (left Transfomer Diagram)! So I'm gonna go thro the right step by step for ya to understand the logic!
 
+## Encoder-Decoder 
