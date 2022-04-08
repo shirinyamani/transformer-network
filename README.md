@@ -23,6 +23,8 @@
 6. Coupling Sequence Encoder to Decoder
     - Decoder
     - Deep Decoder Intepretation
+    - Softmax
+    - Cross Attention
 
 # 1. Introduction to word embedding concept
 
@@ -362,4 +364,14 @@ So the idea is every time we predict a new word, that input sequence on right(2)
 - Attention network on the output sequence accounts for the context!
 - Output of the Encoder will be the Keys and Values for the attention network of the Decoder! And the Query is comming from the bottom! (**Cross Attention**)
 - Employ attention of the final embedding of the input sequence!
-- Then lastly thro the Softmax layer we get the next prediction based on the left-most word!
+- Then lastly thro the **Softmax** layer we get the next prediction based on the left-most word!
+
+# ⁉️🧠 Why Softmax?
+
+It's finally time to confront some of the simplistic assumptions I made during our first pass through explaining the attention mechanism. Words are represented as dense embedded vectors, rather than one-hot vectors. Attention isn't just 1 or 0, on or off, but can also be anywhere in between. To get the results to fall between 0 and 1, we use the softmax trick again. It has the dual benefit of forcing all the values to lie in our [0, 1] attention range, and it helps to emphasize the highest value, while agressively squashing the smallest. It's the differential almost-argmax behavior we took advantage of before when interpreting the final output of the model.
+
+## 😐 But...
+
+Putting a softmax function in attention has one big downpoint! It is that it will tend to focus on a single element. This is a limitation we didn't have before. Sometimes it's useful to keep several of the preceding words in mind when predicting the next, and the softmax just robbed us of that. This is a problem for the model. We will talk about the solution within a paragraph! 😉
+
+# Cross Attention
