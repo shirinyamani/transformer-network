@@ -20,6 +20,8 @@
     - Overall architecture
 5. Sequence Encoder
     - Encoder
+6. Coupling Sequence Encoder to Decoder
+    - Decoder
 
 # 1. Introduction to word embedding concept
 
@@ -319,3 +321,19 @@ Let's recap the so-called Transformer network!
 By going thro all of the above steps, we were successfully able to Encode a sequence! And if we did it one time, there is no reason to not doing it K time! Where in practice K is 3 or 6! So we can repeat the process K time which possibly makes it a **Deep Sequence Encoder** that tend to improve performance!
 
 <img src="./img/overall1.png">
+
+# Coupling Sequence Encoder to Decoder 
+
+Thus far we have talked about Sequence Encoder and the way it work for predicting the next word in the sequence!
+But imagine a setuation where we not only wanna predict the nxt word but we wanna predict the next **sequence of words**! not just one word!
+Take Traslation from one language to another as example! 
+So here we gotta not only decode the original sequence but also we need to decode it to another language and try to understand the same architecture in another language, right?  So as an example, consider "the orange cat is nacho" in English and ya wanna traslate it into English!
+
+So based on what we've learnt so far till now, we first need to Encode this sequence, the process with respect to diagram above in Sequence Encode Section will be sth like this;
+
+<img src="./img/seq1">
+
+So now we have encoded our sequence, but say we wanna convert it to another language (e.g. French), if so, then gotta Decode it to the target language, right?
+
+So the way we're gonna do that Decoding for the entire sequence, we will do it by sth which is on right side which have alot incommon with what have learnt so far (left Transfomer Diagram)! So I'm gonna go thro the right step by step for ya to understand the logic!
+
