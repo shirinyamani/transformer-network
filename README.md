@@ -22,7 +22,7 @@
     - Encoder
 6. Coupling Sequence Encoder to Decoder
     - Decoder
-    - Decoder Intepretation
+    - Deep Decoder Intepretation
 
 # 1. Introduction to word embedding concept
 
@@ -357,3 +357,9 @@ So the thing that I wanna ya to **🔥notice** here is that the **input** at the
 So the idea is every time we predict a new word, that input sequence on right(2) **get shifted** to the right by one position then the new word goes to the most-left position! So the input on the right, is always shifting to the right as we predict new words!
 
 # Decoder Interpretation
+- Output sequence are the previous decoded words!
+- Embedded words will represent any language codebook!
+- Attention network on the output sequence accounts for the context!
+- Output of the Encoder will be the Keys and Values for the attention network of the Decoder! And the Query is comming from the bottom! (**Cross Attention**)
+- Employ attention of the final embedding of the input sequence!
+- Then lastly thro the Softmax layer we get the next prediction based on the left-most word!
