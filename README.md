@@ -26,6 +26,7 @@
     - Softmax
     - Cross Attention
 7. Multi-head Attention 
+    - Intepretation
 
 # 1. Introduction to word embedding concept
 
