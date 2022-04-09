@@ -410,6 +410,12 @@ So as we discussed earlier, the Quary, Keys, and Values all are d-dimensional ve
 
 <img src="./img/multi.png">
 
-## Interpretation
+## Recall...
 
 So ya recall our Paris🗼 example? where the embedding vector that is associated with each word, had topical meaning and then each of the components of that vector represent a topic, and if the word Paris🗼, is aligned with that topic, the associated component is positive. So for example, Paris is the capital of France, it has political significance. So the second component which notionally is associated with politics is positive, on the other hand Paris doesn't have that much to do with gender, so you see that the first component associated with sports is slightly negative! So you recall this is the intuition that underlies the word vectors!
+
+## Intrepretation
+
+<img src="./img/multi1.png">
+
+Now, remember that each of the, in this case the queries, corresponds to a vector associated with a particular word, and remember that each of the components of that vector represent topics? (1) So the way that we can think about this, is that we're taking the query q, and we're taking an inner product of qi here with row 1, row 2, and row k of the matrix MQ,(2) and that we represent those rows as r1, r2, all the way to rk! So we're basically taking the original query vector qi, and project it onto the k rows of this matrix MQ! In other words, each of the k rows of the matrix MQ represent overarching, what we call meta-topics! And so what's happening is that each of the rows of that matrix, is selecting or emphasizing some of the components of the query vector qi, and essentially what we're doing is by using this matrix, we're highlighting certain topics or meta-topics that are important. And so this summarizes that, and so this matrix MQ which is represented in here in blue, which is composed of k rows, each row is of d dimension, is mapping the original query vector qi, which was d dimensional, to a new vector which is k dimensional. Those k dimensions of the new vector represent what we will call meta-topics of the original vector. So this is a general concept, this idea of multiplying the query times a matrix, and so doing, highlighting k meta-topics associated with that vector!
