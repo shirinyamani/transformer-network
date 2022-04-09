@@ -375,11 +375,7 @@ Using softmax have some strong benefits!
 1. It helps to force the attention network output result fall between 0 and 1. In other words, it forces all the values to lie in [0, 1] attention range!
 2. It helps to emphasize the highest value, while agressively squashing the smallest! This means that if one word scores higher than the others by far, softmax will make it look like an argmax, with the winning value close to one and all the others close to zero. So this way the model the winner word is the one which probability is close to 1! 
 
-## 😐 But...
-
-Putting a softmax function at top of the attention network has one big downpoint! That is it will tend to focus on a single element which is a big limitation! Because we should keep several of the preceding words in mind when predicting since the overall target is to predict the potential next sequence of words, and the softmax just robbed us of that! This is a problem for the model.The solution to this problem is to have several different instances of attention/heads running at once! This lets the the transformer consider several previous words simultaneously when predicting the next set! We will discuss this solution in great detail in next 2 paragraphs!
-
-# Cross Attention
+# Cross Attention 🔀
 
 So at the top of our Encoder we will get a output sequence of M d-dimensional vectors correspondind to the original M input words!
 Now these M vectors are the **Values** and the **keys** for the attention network of the Decoder!
@@ -396,7 +392,7 @@ So what's happening here is that the N words that have been decoded thus far are
 
 # Multi-head Attention
 
-## Ways that Attention is manifested
+## Ways that Attention is manifested 🥸
 
 - **Self Attention**
 - **Cross Attention**
@@ -404,13 +400,23 @@ So what's happening here is that the N words that have been decoded thus far are
 
 ## Multi-head Attention
 
-What is actually happining here is generalization of the Attention Mechanism that we've seen before! (refer to the Notational Meaning Section)
+## ⁉️🧠 Why Multi-head Attention?
 
-So what we would do now is intrpducing a Notation or Functional form for the Attention Mechanism which basically says that Attention is s function of the Query Q, Keys K and Values V, right?
+Ya remember I mentioned putting softmax at top of our network would help to force the output falls between[0,1]? But such approach has one big downpoint! That is it will tend to focus on a single element which is a big limitation! **Ya ask why⁉️** Because we should keep several of the preceding words in mind when predicting since the overall target is to predict the potential next sequence of words, and the softmax just robbed us of that! This is a problem for the model.The solution to this problem is to have several different instances of attention/heads running at once! This lets the the transformer consider several previous words simultaneously when predicting the next set! And that's the intuition beyond using multi-head attention!
+
+## What is Multi-head Attention? 🤔
+
+Multi-head attention is basically a generalization of the Attention Mechanism that we've seen before! (refer to the Notational Meaning-- Attention Mechanism)!
+
+So what we would do now is introducing a Functional form for the Attention Mechanism which basically says that Attention is a function of the Query *Q*, Keys *K* and Values *V*, right? **😉**
 
 `output = Attention(Q, K, V)`
 
-So as we discussed earlier, the Quary, Keys, and Values all are d-dimensional vectors!(1) So now, if we consider the ith query or the ith one of these n vectors (1), what we're going to do is do a projection, what we call a projection of that query qi, so qi is a vector, it's d dimensional and it corresponds to the ith one of those n vectors, 1, 2 through capital N. What we're going to do is, we're going to multiply that vector qi which is d dimensional, times a matrix, where the matrix is composed of k rows, each one of the rows is also d dimensional. So what we're doing is, we're taking each of the rows of the matrix MQ, so MQ is a matrix M which is operating on a query q. So we called M superscript Q, this is a query matrix. What we're doing is, we're taking the query qi, and we're taking an inner product of qi with k vectors, each of which corresponds to the rows of the matrix that you see in blue. And so what this can be viewed as doing is, we're taking the query qi and we're mapping it on to what we call a linear subspace, which is spanned by the k rows of the matrix MQ.(2)
+So as we discussed earlier, the Quary, Keys, and Values all are d-dimensional vectors!**(1)** So now, if we consider the ith query or the ith one of these n vectors (1), what we're going to do is do a projection, what we call a projection of that query qi (qi is a vector, it's d dimensional and it corresponds to the ith one of those n vectors, 1, 2, N),  we're going to multiply that vector qi which is d-dimensional, times a matrix, where the matrix is composed of K rows, each of which is also d-dimensional. **But wait...🤔 Why Projection⁉️**
+
+implementing such multi-head architechture really increases the computational load!**🤦‍♀️** Computing attention was already the bulk of the work, and we just multiplied it by many heads we want to use, ain't it cray? **🤯** To get around this, we use the trick of projecting everything into a lower-dimensional embedding sub-space. This possibly shrinks the matrices involved which dramatically reduces the computation time! The day is saved! **😁☀️**
+
+ So what we're doing is, we're taking each of the rows of the matrix MQ, so MQ is a matrix M which is operating on a query q. So we called M superscript Q, this is a query matrix. What we're doing is, we're taking the query qi, and we're taking an inner product of qi with k vectors, each of which corresponds to the rows of the matrix that you see in blue. And so what this can be viewed as doing is, we're taking the query qi and we're mapping it on to what we call a linear subspace, which is spanned by the k rows of the matrix MQ.(2)
 
 <img src="./img/multi.png">
 
