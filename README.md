@@ -367,15 +367,17 @@ So the idea is every time we predict a new word, that input sequence on right(2)
 - Attention network on the output sequence accounts for the context!
 - Output of the Encoder will be the Keys and Values for the attention network of the Decoder! And the Query is comming from the bottom! (**Cross Attention**)
 - Employ attention of the final embedding of the input sequence!
-- Then lastly thro the **Softmax** layer we get the next prediction based on the left-most word!
+- Then lastly thro the **Softmax** layer we get the next prediction based on the left-most word! But wait....
 
 # ⁉️🧠 Why Softmax?
 
-It's finally time to confront some of the simplistic assumptions I made during our first pass through explaining the attention mechanism. Words are represented as dense embedded vectors, rather than one-hot vectors. Attention isn't just 1 or 0, on or off, but can also be anywhere in between. To get the results to fall between 0 and 1, we use the softmax trick again. It has the dual benefit of forcing all the values to lie in our [0, 1] attention range, and it helps to emphasize the highest value, while agressively squashing the smallest. It's the differential almost-argmax behavior we took advantage of before when interpreting the final output of the model.
+Using softmax have some strong benefits! 
+1. It helps to force the attention network output result fall between 0 and 1. In other words, it forces all the values to lie in [0, 1] attention range!
+2. It helps to emphasize the highest value, while agressively squashing the smallest! This means that if one word scores higher than the others by far, softmax will make it look like an argmax, with the winning value close to one and all the others close to zero. So this way the model the winner word is the one which probability is close to 1! 
 
 ## 😐 But...
 
-Putting a softmax function in attention has one big downpoint! It is that it will tend to focus on a single element. This is a limitation we didn't have before. Sometimes it's useful to keep several of the preceding words in mind when predicting the next, and the softmax just robbed us of that. This is a problem for the model. We will talk about the solution within a paragraph! 😉
+Putting a softmax function at top of the attention network has one big downpoint! That is it will tend to focus on a single element which is a big limitation! Because we should keep several of the preceding words in mind when predicting since the overall target is to predict the potential next sequence of words, and the softmax just robbed us of that! This is a problem for the model.The solution to this problem is to have several different instances of attention/heads running at once! This lets the the transformer consider several previous words simultaneously when predicting the next set! We will discuss this solution in great detail in next 2 paragraphs!
 
 # Cross Attention
 
@@ -412,7 +414,7 @@ So as we discussed earlier, the Quary, Keys, and Values all are d-dimensional ve
 
 <img src="./img/multi.png">
 
-## Recall...
+## Recall 🧘‍♀️🧘‍♂️...
 
 So ya recall our Paris🗼 example? where the embedding vector that is associated with each word, had topical meaning and then each of the components of that vector represent a topic, and if the word Paris🗼, is aligned with that topic, the associated component is positive. So for example, Paris is the capital of France, it has political significance. So the second component which notionally is associated with politics is positive, on the other hand Paris doesn't have that much to do with gender, so you see that the first component associated with sports is slightly negative! So you recall this is the intuition that underlies the word vectors!
 
