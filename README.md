@@ -433,3 +433,11 @@ Now, as we've talked about, what this is basically doing is mapping the original
 we can do exactly the same thing for the keys and for the values. So M_Q corresponds to a projection matrix for the queries. M_K corresponds to a projection matrix for the keys and M_V corresponds to a projection matrix for the values. We can do this multiple times, in other words we can have h different matrices, h different matrices for the queries, and h different matrices for the keys, and h different matrices for the values. Here what we're showing is with the subscript i, M_i, we're showing the ith example of them. So what we're doing by this projection, in each case for the queries, the keys and the values, we take the original sequence of vectors here, n vectors, each one of which is d dimensional. After this projection, we map those n vectors to a new sequence of n vectors, each of which is k dimensional. 
 
 <img src="./img/multi3.png">
+
+So if get back to our functional representation of our Attention, then we would update it like;
+
+`output i = Attention(Mik K, Mik V, Mik Q)`
+
+ So now recall that the output for the ith instantiation of the matrices is repeated? We can do this h different times for h different manifestations of those matrices and therefore we get output 1, output 2 through output h of these different attention mechanisms. We then take those output vectors, we just stack them one after the other, that's called concatenation so the concat means concatenation. So what we're doing is we're taking output vector 1, the next vector output 2, then output 3 through output h, we just stack them all together. That's called concatenation. Then we do what's called a linear transformation through the matrix WO, which corresponds to the output, and then this is the final output of the multi-head attention!
+
+<img src="./img/multi4.png">
