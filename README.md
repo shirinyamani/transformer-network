@@ -27,6 +27,7 @@
     - Cross Attention
 7. Multi-head Attention 
     - Intepretation
+    - h Projection "Heads"
 
 # 1. Introduction to word embedding concept
 
@@ -420,3 +421,11 @@ So ya recall our Paris🗼 example? where the embedding vector that is associate
 <img src="./img/multi1.png">
 
 Now, remember that each of the, in this case the queries, corresponds to a vector associated with a particular word, and remember that each of the components of that vector represent topics? (1) So the way that we can think about this, is that we're taking the query q, and we're taking an inner product of qi here with row 1, row 2, and row k of the matrix MQ,(2) and that we represent those rows as r1, r2, all the way to rk! So we're basically taking the original query vector qi, and project it onto the k rows of this matrix MQ! In other words, each of the k rows of the matrix MQ represent overarching, what we call meta-topics! And so what's happening is that each of the rows of that matrix, is selecting or emphasizing some of the components of the query vector qi, and essentially what we're doing is by using this matrix, we're highlighting certain topics or meta-topics that are important. And so this summarizes that, and so this matrix MQ which is represented in here in blue, which is composed of k rows, each row is of d dimension, is mapping the original query vector qi, which was d dimensional, to a new vector which is k dimensional. Those k dimensions of the new vector represent what we will call meta-topics of the original vector. So this is a general concept, this idea of multiplying the query times a matrix, and so doing, highlighting k meta-topics associated with that vector!
+
+## h Projection "heads"
+
+Now, as we've talked about, what this is basically doing is mapping the original d-dimensional vector q_i which corresponds to all of the d topics that can be characteristic of a word. We're mapping it into meta topics, where each meta topic is characterized by one of the rows of the matrix at the left in blue, where each row, the weighting of the components of each row highlight particular topics associated with the word embedding factor! (1)
+
+ Now, if we can do this one time with one particular matrix, M_i, so this is the ith example of the projection matrix, we can do this h times. So what we can do is we can take the original vector, the original query q_i, and we can multiply it times M_1, M_2 through M_h, where we have h different types of projection matrices of this form.(2) So by doing this, what we're doing is we're taking the original vector q_i and mapping it onto h different linear subspaces which are defined by the corresponding matrix, which is highlighted on the top in blue. So what this is doing is through these matrices, M_1, M_2 through M_h, we are highlighting by each of them individually different subspaces, different sets of meta topics associated with the original word vector here q_i. So in this way, what we're doing is we're highlighting through these matrices M_1 through M_h, we're highlighting particular aspects or topical characteristics of particular words.
+
+<img src="./img/multi2.png">
