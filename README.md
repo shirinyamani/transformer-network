@@ -400,9 +400,7 @@ So what's happening here is that the N words that have been decoded thus far are
 
 ## Multi-head Attention
 
-What is actually happining here is generalization of the Attention Mechanism that we've seen before!
-
-<img src="./img/notation.png">
+What is actually happining here is generalization of the Attention Mechanism that we've seen before! (refer to the Notational Meaning Section)
 
 So what we would do now is intrpducing a Notation or Functional form for the Attention Mechanism!
 
