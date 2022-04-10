@@ -461,3 +461,11 @@ So if get back to our functional representation of our Attention, then we would 
  So now recall that the output for the ith instantiation of the matrices is repeated? We can do this h different times for h different manifestations of those matrices and therefore we get output 1, output 2 through output h of these different attention mechanisms. We then take those output vectors, we just stack them one after the other, that's called concatenation so the concat means concatenation. So what we're doing is we're taking output vector 1, the next vector output 2, then output 3 through output h, we just stack them all together. That's called concatenation. Then we do what's called a linear transformation through the matrix WO, which corresponds to the output, and then this is the final output of the multi-head attention!
 
 <img src="./img/multi4.png">
+
+In the following I will attach the oroginal diagram from the Attention paper;
+
+<img src="./img/tforg.png">
+
+And the multi-head attention diagram from the paper;
+
+<img src="./img/tforg1.png">
