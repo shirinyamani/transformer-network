@@ -1,4 +1,8 @@
-# transformer-network
+# transformer-network 😈
+
+Transformers🤗 has become front-runner for our everyday-life applications! Powering from Google,Twitter, Zoom to Uber & many more! Little by little it's becoming the default approach to build features, products, workflows and technology!
+
+Transformers were introduced in this 2017 paper as a tool for sequence transduction—converting one sequence of symbols to another. The most popular examples of this are translation, as in English to German. It has also been modified to perform sequence completion—given a starting prompt, carry on in the same vein and style. They have quickly become an indispensible tool for research and product development in natural language processing.
 
 1. Word embedding concept
     - word mapping
