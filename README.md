@@ -4,7 +4,7 @@ Transformers🤗 has become front-runner for our everyday-life applications! Pow
 
 Transformers were first introduced in [Attention is All you Need](https://arxiv.org/abs/1706.03762) paper as a tool for sequence transduction—converting one sequence of symbols to another. The most popular examples at the time was translation, as in English to German🇩🇪. However, nowadays they become frontier in NLP but also has done so magic in vision 🤩🔥 area as well!
 
-So by now, ya should have understand the importance of getting to know about Transformers🤗, So let's dive in n see what they really are **🔥**! So much fun ahead! **🤩🥳**
+So by now, ya should have understand the importance of getting to know about Transformers🤗, So let's dive in n see what they really are **🔥**! So much fun ahead! **🤩🥳** So let's dive in! **🏊‍♂️🏊‍♀️**
 
 ## Content 📝
 1. **Word embedding**
