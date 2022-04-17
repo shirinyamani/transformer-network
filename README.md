@@ -1,6 +1,6 @@
 # transformer-network
 
-1. word embedding concept
+1. Word embedding concept
     - word mapping
     - word to vector
     - Conceptualization of Word Vectors
