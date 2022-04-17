@@ -7,7 +7,7 @@ Transformers were first introduced in [Attention is All you Need](https://arxiv.
 So by now, ya should have understand the importance of getting to know about Transformers🤗, So let's dive in n see what they really are **🔥**! So much fun ahead! **🤩🥳** So let's dive in! **🏊‍♂️🏊‍♀️**
 
 ## Content 📝
-1. **Word embedding**
+1. **Mapping Words to Vectors**
     - Word mapping
     - Word to vector
     - Conceptualization of word vectors
