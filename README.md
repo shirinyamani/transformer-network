@@ -2,9 +2,11 @@
 
 Transformers🤗 has become front-runner for our everyday-life applications! Powering from Google,Twitter, Zoom to Uber & many more! Little by little it's becoming the default approach to build features, products, workflows and technology!
 
-Transformers were first introduced in [Attention is All you need](https://arxiv.org/abs/1706.03762) paper as a tool for sequence transduction—converting one sequence of symbols to another. The most popular examples at the time was translation, as in English to German. However, nowadays they become frontier in NLP but also has done so magic in vision 🤩🔥 area as well!
+Transformers were first introduced in [Attention is All you need](https://arxiv.org/abs/1706.03762) paper as a tool for sequence transduction—converting one sequence of symbols to another. The most popular examples at the time was translation, as in English to German🇩🇪. However, nowadays they become frontier in NLP but also has done so magic in vision 🤩🔥 area as well!
 
+So by now, ya should have understand the importance of getting to know about Transformers🤗, So let's dive in n see what they really are **🔥**! So much fun ahead! **🤩🤩**
 
+## Content 📝
 1. Word embedding concept
     - word mapping
     - word to vector
