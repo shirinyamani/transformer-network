@@ -38,11 +38,14 @@ So by now, ya should have understand the importance of getting to know about Tra
 
 # 1. Introduction to word embedding concept
 
-Before deep diving into Transformers 🤗 we need to get familiar with a basic concepts of word embedding! So, the idea is very simple; Word Embedding means that every word in our vocabualry is gonna be mapped to a vector!
+Before deep diving into 🏊‍♀️ Transformers we need to first get familiar with a basic concepts of word embedding! 
+The general idea of **Word Embedding** is that every word in our vocabualry is gonna be mapped to a vector!
 
 <img src="./img/w2vec.png">
 
-In order to understand the concept of word embedding, let's just think of map of globe 🌎! So what I'm showing in the following map is several different squres🟥, triangles🔺, and circles 🟣 (i.e location 📍). What I wanna convey thro this, is the fact that the reigons which are geographocally close to each other, have similar characteristics and very different characteristics from the ones that are far away from each other! So for example, we expect that the people, culture, lifestyle, etc of the people in Asia (circles 🟣🟣) are similar to each other but very different from ones in North America (squres 🟥🟥)!
+**But wait... What does it mean and how can it be done? 🤔**
+In order to understand the concept of word embedding, let's just think of map of globe 🌎! So what I'm showing in the following map is several different squres🟥, triangles🔺, and circles 🟣 (i.e. several locations 📍 throughtout the 🌎).
+So if you think about these locations in different parts, you probable agree that the reigons which are geographocally close to each other, have similar characteristics (e.g. similar culture, people, etc) and very different characteristics from the ones that are far away from each other! So for example, we expect that the people, culture, lifestyle, etc of the people in Asia (circles 🟣🟣) are similar to each other but very different from ones in North America (squres 🟥🟥), right? 
 
 <img src="./img/world.png">
 
