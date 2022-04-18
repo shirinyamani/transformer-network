@@ -159,9 +159,9 @@ Do ya remember the my notinal example of Paris🗼? So now imagine we have two *
 
 <img src="./img/innerwhy.png"> 
 
-Then if you remember, **inner product** would take component by component and multipy them together! So if the components of *C1* and *C2* shares similar signs (+ and + or - and -) then the inner product of them gonna be possitive and large, right? then if sum all these positive values we would endup a large positive number, right? 
-Similarly if two words are dissimilar then it means that the component of their associated vectors **do not** have similar signs(i.e. + and - or - and +) and hence the multiplication of the components then the sum will be negative and small, right? 
-So this exactly why when we say that the inner product is gonna be **positive and large** if the **two words are similar**! 😎
+Then if you remember, **inner product** would take component by component and multipy them together! So if the components of *C1* and *C2* shares similar signs (both **+** or both **-**) then the inner product of them gonna be **possitive and large**, right? (Because we are multipying two similar-sign values!) Then imagine if we sum all these positive values!, We would definitalr end up with a large positive number, right? 💪
+
+Similarly if two words are **dissimilar** then it means that the component of their associated vectors **do not** have similar signs(i.e.**+ and -** or **- and +**) and hence the multiplication of the components then the sum will be **negative and small**, right?  
 
 ## But... 😐
 In the concept of Machine Learning, it's not pretty convenient to work with dot products or values that are sometimes +(for similar words) and sometimes -(for dissimilar word), right? 
