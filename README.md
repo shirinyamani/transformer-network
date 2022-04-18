@@ -75,10 +75,10 @@ Now, the way we gonna do this is; **map or relate every word in our vocabulary t
 
 ## Word to Vector(word2vec)
 
-Each of the vectors associated with the given words is often called **Embedding**! So the idea of **embedding** is to **map the words to a vector or to embed a word in a vector** space!
+Each of the vectors associated with the given words is often called **Embedding**! So the idea of **Embedding** is to **map the words to a vector or to embed a word in a vector** space!
 <img src="./img/w2vec2.png">
 
-So the idea is basically mapping each and every word to a vector!
+So the idea is basically mapping each and every word to a vector! Subsequently, getting the vector form of each word, right? 
 
 <img src="./img/w2vec.png">
 
@@ -89,20 +89,23 @@ So the idea is basically mapping each and every word to a vector!
 But what I want you to achieve from here is that;
 1. **C(i)** (C stands for Code) is the vector associated with the **word(i)**! Note that each of the C(i) is a D-dimensional vector!
 2. If two words are **similar**, then we would expect their **associated vectors to be nearby/close** to each other!
-3. Then we gonna learn those vectors from C(1) to C(n) based upon a large corpus of text! So the idea of this learning concept is to achieve proximity of the words to each other!
+3. Then we gonna learn those vectors from C(1) to C(n) based upon a large corpus of text! So the idea of this learning concept is to achieve proximity of the words to each other, right?
 4. Once we have achieved this codes, then we would have codebook composed of all the vectors associated with the words!
 5. Then once we get such codebook then we are ready to start our analysis process with the associated algorithms! Since now we have numbers(vectors) that are well enough to do the mathematical analysis! Look at the example below;
 
 <img src="./img/w2vecexp.png">
 
-The key 🔑 idea in all of these methods is that, for each word in a given document, we should be anle to **predict the presence of the surrounding words**! So, the idea is that, the words have meaning, that meaning implies at a given word, that should indicate particular other words is present in surronding with high probability! So **Word Vectors** which we gonna learn is meant to preserve that concept!  So with that being said, let's see the **Conceptialization of Meaning of Word Vectors**!
+The key 🔑 idea in all of these methods is that, for each word in a given document, we should be anle to **predict the presence of the surrounding words**! So, the idea is that, the words have meaning, that meaning implies at a given word, that should indicate particular other words is present in surronding with high probability! So **Word Vectors** which we gonna learn is meant to preserve that **concept**!  So with that being said, let's see the **Conceptialization of Meaning of Word Vectors**!
 
 ## Conceptualization of Word Vectors
-Let's assume the following picture to be a assosiated meaning of the word vector! Then let's consider a 10-dimensional word vector which basically represents the meaning of the word! and each of these 10 dimensions are associated with a particular meaning! With this then we can say;
-1. Each of these 10 components are associated with a particular meaning which can be viewed as a "topic"! If so, then each of these topics represents the characteristics of the word!
-2. If a given word is aligned with the ith component then we would expect the corresponding value of ith element to be positive becuase it aligned with the word!
-3. If a given word is not aligned with the ith component then we would expect the corresponding value of i to be negative becuase it is not aligned with the word!
+Let's assume the following picture to be a assosiated meaning of the word vector! Then let's consider a 10-dimensional word vector which basically represents the meaning of the word! In other words, each of these 10 dimensions are associated with a particular meaning! 
 
+**So till now;**
+1. Each of these 10 components are associated with a particular meaning which can be viewed as a "topic"! If so, then each of these topics represents the characteristics of the word!
+2. If a given word is aligned with the *i*th component then we would expect the corresponding value of *i*th element to be positive becuase it aligned with the word!
+3. If a given word is not aligned with the *i*th component then we would expect the corresponding value of *i* to be negative becuase it is not aligned with the word!
+
+**But wait...What?🤔**
 So just notinaly let's look at a word as an example to better understand the concept! So here, I am assigning the "topics" or "themes" to that 10-dimensional vector which gonna be learnt thro our network! Look at the word "Paris" and the vector associated with it below;
 <img src="./img/paris.png">
 
