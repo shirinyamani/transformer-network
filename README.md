@@ -8,6 +8,7 @@ So by now, ya should have understand the importance of getting to know about Tra
 
 ## Content 📝
 1. **Mapping Words to Vectors**
+    - Word embedding
     - Word mapping
     - Word to vector
     - Conceptualization of word vectors
@@ -36,8 +37,9 @@ So by now, ya should have understand the importance of getting to know about Tra
     - Intepretation
     - h Projection of "Heads"
 
-# 1. Introduction to word embedding concept
+# 1. Mapping Words to Vectors
 
+## Word Embedding 
 Before deep diving into 🏊‍♀️ Transformers we need to first get familiar with a basic concepts of word embedding! 
 The general idea of **Word Embedding** is that every word in our vocabualry is gonna be mapped to a vector!
 
