@@ -78,7 +78,7 @@ Now, the way we gonna do this is; **map or relate every word in our vocabulary t
 Each of the vectors associated with the given words is often called **Embedding**! So the idea of **Embedding** is to **map the words to a vector or to embed a word in a vector** space!
 <img src="./img/w2vec2.png">
 
-So the idea is basically mapping each and every word to a vector! Subsequently, getting the vector form of each word, right? 
+So the idea is basically mapping each and every word to a vector! Subsequently, getting the vector form of each word, right?🌱
 
 <img src="./img/w2vec.png">
 
@@ -102,16 +102,18 @@ Let's assume the following picture to be a assosiated meaning of the word vector
 
 **So till now;**
 1. Each of these 10 components are associated with a particular meaning which can be viewed as a "topic"! If so, then each of these topics represents the characteristics of the word!
-2. If a given word is aligned with the *i*th component then we would expect the corresponding value of *i*th element to be positive becuase it aligned with the word!
-3. If a given word is not aligned with the *i*th component then we would expect the corresponding value of *i* to be negative becuase it is not aligned with the word!
+2. If a given word is **aligned** with the *i*th component then we would expect the corresponding value of *i*th element to be **positive** becuase it aligned with the word!
+3. If a given word is **not aligned** with the *i*th component then we would expect the corresponding value of *i* to be **negative** becuase it is not aligned with the word!
 
 **But wait...What?🤔**
-So just notinaly let's look at a word as an example to better understand the concept! So here, I am assigning the "topics" or "themes" to that 10-dimensional vector which gonna be learnt thro our network! Look at the word "Paris" and the vector associated with it below;
+Let's see how above statements means notionally;
+
+So here, I am assigning the "topics" or "themes" to that 10-dimensional vector which gonna be learnt thro our network! Look at the word "Paris" and the vector associated with it below;
 <img src="./img/paris.png">
 
 If you look at the word "politics" since politics have had a significant role in the history of Paris, so it aligns with the "paris" word. Consequently, the value of "politics" component/topic is positive! Conversely, if you look at the word "gender" it has nothing to do with paris so the the value of "geder" component/topic is negative!
 
-So the idea that I want ya to gather from this is that, what that word vector is doing, is represnting component by component(+ if aligned with the word and - if not aligned with the word) is providing the **underlying themantic of the word**! So, what we gonna do next is to take this **underlying themantic of the word** to form a new natural language processing modeling!
+So the idea that I want ya to gather from this is that, what that word vector is doing, is represnting component by component(**+** if aligned with the word and **-** if not aligned with the word) is providing the **underlying themantic of the word**! So, what we gonna do next is to take this **underlying themantic of the word** to form a new natural language processing modeling!
 
 # 2. Inner Product 
 
