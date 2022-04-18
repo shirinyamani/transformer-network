@@ -118,13 +118,16 @@ So the idea that I want ya to gather from this is that, what that word vector is
 # 2. Inner Product 
 
 ## Accounting for word context
-Now that we understand the concept of word to vector and the intuition beyond it, let's move forward and generalize same concept to a sequence of words!
+Now that we understand the concept of **word2vec** and the intuition beyond it, let's move forward and generalize same concept to a sequence of words!
+
 So based on our current knowledge, in order to get the words ready for further mathematical analysis and modeling, we map each word to a vector of d-dimensional!
 
 <img src="./img/v2wdiagram.png">
 
 ## But... 😏😐
-As you probably notice, this way of mapping each word to a single vector is pretty restrictive! Because, if you look at dictionary, word in different context has different meanings! 
+As you probably notice, this way of mapping each word to a single vector is pretty restrictive 😐! **Ya ask why?**
+Imagine you have a dictionary book 📖, then you head to look for word "bat" meaning! How many different meaning does it have? 
+Doesn't it rely on the concept that the word is being used? Look at the picture below to better understand this!
 
 <img src="./img/bat.png">
 
