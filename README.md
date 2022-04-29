@@ -1,10 +1,10 @@
 # Transformer Network 😈
  
-Transformers🤗 has become the front-runner for our everyday-life applications! Powering from Google, Twitter, Zoom to Uber & many more! Little by little it's becoming the default approach to building features, products, workflows, and technology!
+Transformers🤗 has become the front-runner for our everyday-life applications! Powering from Google, Twitter, Zoom to Uber & many more! Little by little it becomes the default approach to building features, products, workflows, and technology!
  
-Transformers were first introduced in [Attention is All you Need](https://arxiv.org/abs/1706.03762) paper as a tool for sequence transduction—converting one sequence of symbols to another. The most popular example at the time was a translation, from English to German🇩🇪. However, nowadays they have not only become frontier in NLP but also have done so magically in the vision 🤩🔥 area!
+Transformers were first introduced in [Attention is All you Need](https://arxiv.org/abs/1706.03762) paper as a tool for sequence transduction—converting one sequence of symbols to another. The most popular example at the time was translation, from English to German🇩🇪. However, nowadays, they have not only become frontier in NLP but also have done so magically in the vision 🤩🔥 area!
  
-So by now, ya should have understood the importance of getting to know about Transformers🤗 as an inseparable part of our life! So let's dive in **🏊‍♂️🏊‍♀️** and see what they are **🔥**!  So much fun ahead! **🤩🥳**
+So by now, ya should have understood the importance of getting to know about Transformers🤗 as an inseparable part of our life! So let's dive in **🏊‍♀️** and see what they are **🔥**!  So much fun ahead! **🤩🥳**
  
 ## Content 📝
 1. **Mapping Words to Vectors**
@@ -54,7 +54,7 @@ So if you think about these locations in different parts, you probably agree tha
 So if we think of it from a math viewpoint by considering the latitude and longitude lines(2D space), we can come up with the following idea:
 - If two points have similar latitude and longitude, then we would expect that they are very close to each other!
 - Whereas if the associated latitudes and longitudes of 2 points are very different, then we would expect that they are far away from each other!
-So, we have a concept of **Similarity** manifested thro **Proximity**, right? 🔥
+So, we have a concept of **Similarity** manifested through **Proximity**, right? 🔥
  
 Now let's see how can we relate what we have discussed(similarity and closeness) to the **Word Embedding** concept!👇
 1. If you mimic the same concept for our natural language vocabulary, then you would probably say that every vocabulary word is gonna be mapped to a point in 2D space!
@@ -490,7 +490,7 @@ So now recall that the output for the ith instantiation of the matrices is repea
  
 <img src="./img/multi4.png">
  
-In the following I will attach the original diagram from the Attention paper;
+Below the original diagram from the Attention paper is attached.
  
 <img src="./img/tforg.png">
  
