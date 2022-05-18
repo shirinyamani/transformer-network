@@ -1,10 +1,10 @@
 # Transformer Network 😈
  
-Transformers🤗 has become the front-runner for our everyday-life applications! Powering from Google, Twitter, Zoom to Uber & many more! Little by little it becomes the default approach to building features, products, workflows, and technology!
+Transformers🤗 has become the front-runner for our everyday-life applications! Powering from Google, Twitter to Zoom, Uber & many more! Little by little it becomes the default approach to building features, products, workflows, and technology!
+
+Transformers were first introduced in [Attention is All you Need](https://arxiv.org/abs/1706.03762) paper as a tool for sequence transduction—converting one sequence of symbols to another. One of the most popular usage of them at that time was translation. However, nowadays, they have not only become frontier in NLP but also have done so magically in the vision 🤩🔥 area!
  
-Transformers were first introduced in [Attention is All you Need](https://arxiv.org/abs/1706.03762) paper as a tool for sequence transduction—converting one sequence of symbols to another. The most popular example at the time was translation, from English to German🇩🇪. However, nowadays, they have not only become frontier in NLP but also have done so magically in the vision 🤩🔥 area!
- 
-So by now, ya should have understood the importance of getting to know about Transformers🤗 as an inseparable part of our life! So let's dive in **🏊‍♀️** and see what they are **🔥**!  So much fun ahead! **🤩🥳**
+So by now, ya should have understood the importance of getting to know about Transformers🤗 as an inseparable part of our life! So let's dive in **🏊‍♀️**!  So much fun ahead! **🤩🥳**
  
 ## Content 📝
 1. **Mapping Words to Vectors**
@@ -139,7 +139,7 @@ Therefore we need to build a framework by which, we can modify this mapping in a
  
 To do that, we need to first get familiar with the concept of **Inner Product**!
  
-**But wait... remember **I mentioned that within the concept of word2vec, we map each word to a vector of d-dimensional! Where each of those d-dimensional vectors is associated with a particular meaning/topic! Keep this in mind then go to the next paragraph👇
+**But wait... remember ** I mentioned that within the concept of word2vec, we map each word to a vector of d-dimensional! Where each of those d-dimensional vectors is associated with a particular meaning/topic! Keep this in mind then go to the next paragraph👇
  
 <img src="./img/innerpro.png">
  
